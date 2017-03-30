@@ -1,0 +1,14 @@
+DFS:
+
+step 1: insert the starting vertex into stack, then pop it out and set the boole	-an variable corresponding to it to false and push all the connected
+	nodes into the stack.
+step 2: if we encounter a node which is already inside the stack insert it again 	as it would make a difference in the execution order. if the node is 		already deleted ignore it and proceed.
+
+	in implementation set the visited array to false after deletion.
+
+BFS:
+
+step 1:insert the starting vertex into the queue and pop and continue by 		inserting the attached vertex, so on until all queue is empty.
+step 2:if the element appears again which is already in the queue we need not in	sert again as it would not matter.
+	
+	in the implementation set the visited aray to false after inserting in t	he queue.
