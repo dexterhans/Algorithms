@@ -1,0 +1,8 @@
+everytime we pick a weight of a vertex it would be strictly non-decreasing order, it's the minimum weight locally and whenever we discover new weights for the  newly found vertex it would be greater than the previous discovered weights bcz of the prev_weight + edge_weight. so we have earlier vertex weight greater or   equal to last chosen weight and newly discovered weight which is also greater   than last discovered weight.
+
+The path we obtain from dijkstra is shortest: how?
+
+we lock the minimum weight found at a particular point and claim that to be 
+minimum, as until now optimal substructure is maintained and if there were to be path minimum from any undiscovered path, that would always be greater than the  currently discovered path bcz of the non-decreasing path property as anything   discovered further would be greater than the previous minimum of all discovered   vertice weight.
+
+
