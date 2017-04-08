@@ -10,7 +10,7 @@ import java.util.Scanner;
 class Graph{
         private Integer vertices;
         //private int time=0;
-        private ArrayList<LinkedList<Integer>> adjList;
+        ArrayList<LinkedList<Integer>> adjList;
         Graph(int n)
         {
                 this.vertices=n;
@@ -53,8 +53,24 @@ class TopologicalSort{
                 g.addEdge(3,5);
                 boolean[] visited=new boolean[n+1];
                 LinkedList<Integer> list=new LinkedList<Integer>();
-                
-                g.DFS(1,visited,list);
+		int[] inDegree=new int[n+1];
+		for(int i=1;i<=n;i++)
+		{
+		Iterator<Integer> iterator=g.adjList.get(i).iterator();
+		while(iterator.hasNext())
+		{
+		int x=iterator.next();
+		inDegree[x]=1;
+		}
+		//stem.out.print(inDegree[i]+" ");
+	
+		}
+		System.out.println();
+		for(int i=1;i<=n;i++)
+		{
+			if(inDegree[i]==0)
+		 	g.DFS(i,visited,list);
+		}
                 Iterator<Integer> iterator=list.iterator();
                 while(iterator.hasNext())
                 {

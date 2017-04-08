@@ -50,17 +50,25 @@ class CycleDetect{
                 int n=sc.nextInt();
                 Graph g=new Graph(n);
                 g.addEdge(1,3);
-                g.addEdge(1,2);
-                g.addEdge(1,5);
+		g.addEdge(1,2);              
+                g.addEdge(3,2);
                 g.addEdge(5,4);
-                g.addEdge(4,3);
-                g.addEdge(3,1);
+                g.addEdge(4,5);
+              
                 int[] visited=new int[n+1];
-                int result=g.DFS(1,visited);
-                if(result==0)
-                	System.out.println("cycle not detected");
-                else
-                	System.out.println("cycle detected");
+		for(int i=1;i<=n;i++)
+		{
+		if(visited[i]==0)
+		{
+                int result=g.DFS(i,visited);
+                if(result==1)
+                {
+		System.out.println("cycle detected");
+		return;
+		}
+		}
+		}
+		 System.out.println("cycle not detected");
         }
 }
 
