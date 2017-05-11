@@ -18,19 +18,20 @@ public class QuickSort{
                         {
                                 y--;
                         }
-                        if(x<y)// to make sure swap doesn't happen when x<y
+                        if(x<y)// to make sure swap doesn't happen when x>=y and x++,y-- is not necessary as we skip pivots, so the two left 
+				// and right pointer won't get stuck at the same pivot which happens when the pivot is not skipped and ends up 					// in a infinite loop.
                         {
                         arr[x]=arr[y]+arr[x];
                         arr[y]=arr[x]-arr[y];
                         arr[x]=arr[x]-arr[y];
-                        y--;
-                        x++;
+                       // y--;
+                       // x++;
                         }
                        
                 }
-                arr[b]=arr[x];
-                arr[x]=pivot;
-                return x;
+                arr[b]=arr[x];//this won't be necessary if we were not skipping the pivot resulting in swaps to bring the pivot in correct posi
+                arr[x]=pivot;// -tion, but in hoare's when we put arr[x]<pivot and arr[y]>pivot we don't get the pivot placed at correct positi					// -on but the two parts 0 to pivot and pivot+1 to n-1 gets partitioned as less than pivot and greater resp.
+                return x;	// not in this case though as we have used <= and >=
         }
         static void quickSort(int[] arr,int a,int b)
         {
