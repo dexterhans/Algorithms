@@ -1,0 +1,7 @@
+method 1) naive O(mn) i.e copy a array onto arraylist u and then search for every element from the other array, if present do not copy, if not 		copy
+
+method 2) sort and do like union for sorted array
+	
+method 3) sort a smaller array and put into into arraylist, now check for every element of larger array if it is present in smaller array, if 		not add
+
+method 4) hashing, add a array onto hash table and U, and check by iterating the second array if the value is present ignore else add into U

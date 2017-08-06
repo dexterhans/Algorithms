@@ -1,0 +1,14 @@
+method 1: bubble sort( use bubble sort k times, the k maximum elements will bubble out)- o(kn)
+
+method 2: 1)store first k elements in temp array i.e 0...k-1
+	  2)find the smallest element in temp[], let the smallest element be min.
+	  3)for each element k...n-1 check if it is smaller than min, if smaller remove min and insert that element
+	  4)repeat 2 and 3 till we are exhausted of arr, eventually we would have k largest elements
+	  5) take o(k*(n-k))
+method 3: use sorting
+
+method 4: use maxheap for largest (complexity: o(n)+o(klogn))) n for building and klogn for extracting k largest
+
+method 5: use order statistics	complexity: o(n)
+
+method 6: using minheap - (k+logk*(n-k)) k- to build the heap and logk*(n-k) to check for all n-k elements(min and then insert, just the same 		  												  as method2 2 and 3 step)
