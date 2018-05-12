@@ -1,4 +1,7 @@
 import java.io.*;
+
+
+
 public class CeilingSortedArray
 {
 public static int binarySearch(int[] arr,int x)
