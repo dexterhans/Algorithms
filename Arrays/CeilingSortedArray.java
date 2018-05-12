@@ -6,8 +6,8 @@ public class CeilingSortedArray
 {
 public static int binarySearch(int[] arr,int x)
 {
-int start=0,end=arr.length-1;
-int mid=(start+end)/2;
+
+int start=0,end=arr.length-1,mid=(start+end)/2;
 while(start<end)
 {
 if(arr[mid]==x)
