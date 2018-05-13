@@ -3,9 +3,8 @@ public class CountInversions
 {
 	public static int merge(int[] arr,int left, int mid,int right)
 	{
-	int count=0;
 	int[] temp=new int[right-left+1];
-	int i=left,j=mid+1,k=0;
+	int i=left,j=mid+1,k=0,count=0;
 	while(i<=mid && j<=right)
 	{
 	if(arr[i]<=arr[j])
