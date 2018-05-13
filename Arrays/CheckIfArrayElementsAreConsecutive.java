@@ -8,7 +8,9 @@ public class CheckIfArrayElementsAreConsecutive
                 String[] ip=br.readLine().split(" ");
                 int[] arr=new int[size];
                 for(int i=0;i<size;i++)
+                {
                         arr[i]=Integer.parseInt(ip[i]);
+                }
                 int min=0;
                 int max=0;
                 if(arr[0]>arr[1])
