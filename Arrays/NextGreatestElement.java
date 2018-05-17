@@ -5,6 +5,8 @@ public class NextGreatestElement
 public static void main(String[] args) throws Exception
 {
 BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+
+int x=0;
 int size=Integer.parseInt(br.readLine());
 String[] ip=br.readLine().split(" ");
 int[] arr=new int[size];
